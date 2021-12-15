@@ -1,9 +1,15 @@
 
+#THIS PROJECT IS ARCHIVED
+
+It has been quite a ride but after a few years, with multiple initiatives going on around Artemis and Docker both from Redhat and from Apache, I've decided that its time to let these project take the spot the community around this project and I have been occuping till now.
+
+Of course the project will remain read-only and you should feel free to fork but I won't be maintaining anymore.
+
 ## 1. What is ActiveMQ Artemis?
 
 [Apache ActiveMQ Artemis](https://activemq.apache.org/artemis) is an open source project to build a multi-protocol, embeddable, very high performance, clustered, asynchronous messaging system. Apache ActiveMQ Artemis is an example of Message Oriented Middleware (MoM).
 
-![logo](https://activemq.apache.org/artemis/images/activemq-logo.png)
+![logo](https://raw.githubusercontent.com/apache/activemq-artemis/master/docs/user-manual/en/images/artemis-logo.png)
 
 ## 2. What is the ActiveMQ Artemis Helm Chart
 
