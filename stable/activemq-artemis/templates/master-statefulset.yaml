@@ -116,6 +116,9 @@ spec:
       - name: configure-master
         configMap:
           name: {{ include "artemis.fullname" . }}-configure-master
+      {{- if .Values.persistence.securityContext.enabled }}    
+      securityContext: {{- .Values.persistence.securityContext | toYaml | nindent 6 }}
+      {{- end}}   
 {{- if .Values.persistence.enabled }}
   volumeClaimTemplates:
   - metadata:
