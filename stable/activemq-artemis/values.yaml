@@ -45,16 +45,15 @@ replica:
   ## Artemis Replicas annotations
   annotations: {}
 
+securityContext :
+    fsGroup: 1000
+    runAsUser: 0
   ## Read more about kube2iam to provide access to s3 https://github.com/jtblin/kube2iam
   #   iam.amazonaws.com/role: role-arn
 
 ## Persist data to a persitent volume
 persistence:
   testJournalPerformance: AUTO
-  securityContext :
-    enabled: true
-    fsGroup: 1000
-    runAsUser: 0
   enabled: true
   ## If defined, volume.beta.kubernetes.io/storage-class: <storageClass>
   ## Default: volume.alpha.kubernetes.io/storage-class: default
