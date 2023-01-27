@@ -1,5 +1,5 @@
 
-{{- if .Values.loadbalancer.enabled }}
+
 
 apiVersion: v1
 kind: Service
@@ -21,11 +21,15 @@ spec:
   - name: amqp
     port: 5672
     targetPort: amqp
+  {{- if .Values.loadbalancer.enabled }}
   type: LoadBalancer
+  {{- end }}
+  {{ else }}
+  type: ClusterIP
+  {{- end }}
   selector:
     app: {{ template "artemis.name" . }}
     release: {{ .Release.Name | quote }}
   sessionAffinity: "ClientIP"
 
 
-{{- end }}
