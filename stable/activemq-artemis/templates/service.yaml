@@ -23,7 +23,6 @@ spec:
     targetPort: amqp
   {{- if .Values.loadbalancer.enabled }}
   type: LoadBalancer
-  {{- end }}
   {{ else }}
   type: ClusterIP
   {{- end }}
