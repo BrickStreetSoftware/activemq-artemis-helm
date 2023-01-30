@@ -45,6 +45,9 @@ replica:
   ## Artemis Replicas annotations
   annotations: {}
 
+securityContext :
+    fsGroup: 1000
+    runAsUser: 0
   ## Read more about kube2iam to provide access to s3 https://github.com/jtblin/kube2iam
   #   iam.amazonaws.com/role: role-arn
 
